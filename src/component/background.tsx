@@ -1,5 +1,3 @@
-import React from 'react'
-import { TopNav } from './topnav.tsx'
 import { MainBody } from './mainbody.tsx'
 import { SideNav } from './sidenav.tsx'
 
