@@ -1,13 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import { ChakraProvider } from '@chakra-ui/react'
-import './global.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import App from './App';
+import store from './store';
+import './index.css'; // Assuming you're using Tailwind CSS
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <ChakraProvider>
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </ChakraProvider>
-  </StrictMode>,
-)
+    </Provider>
+  </React.StrictMode>
+);
